@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota de venta</title>
+    <link rel="icon" href="img/nventa.png" sizes="20x20">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <div id="cabecera">
+            <div id="h1">
+                <div id="logo">
+                    <img src="img/logo1.jpg" alt="error" height="200px" width="200px" id="img">
+                </div>
+                <div id="nventa"><u>NOTA DE VENTA</u></div>
+            </div>
+            <div class="recupera"></div>
+            <div id="h2">
+                <div id="empresa">
+                    <b>Empresa:</b> Genesis OnlineShop <br>
+                    <b>NIT:</b> 123456789105 <br>
+                    <b>Direcciónc:</b> Av. Compra Cacero #00, Z. Ventas<br>
+                    <b>Telefono:</b> 2 - call me - 20154
+                </div>
+                <div id="numeroventa">
+                    <form action="#" id="formu">
+                        <b>N° de Venta:</b> <input type="number" name="nrove" id="fecha" placeholder="1" required><br>
+                        <b>Fecha de Venta:</b> <input type="date" name="fecha" id="fecha" required>
+                    </form>
+                </div>
+            </div>
+            <div class="recupera"></div>
+        </div>
+        <div id="cliente">
+            <div id="datoscliente">
+                <form action="#">
+                    <b>Cliente: </b><input type="text" name="nomcli" class="dattex" placeholder="Elias Vargas Valdivia"><br>
+                    <b>Nit/CI: </b><input type="tel" name="nit" class="datnum" placeholder="347732" required>
+                    <b>Telefono: </b><input type="tel" name="tel" class="datnum" placeholder="2-243665" pattern="[2]{1}-[0-9]{7}" required max="8">
+                    <b>Movil: </b><input type="tel" name="mov" class="datnum" placeholder="76584321" pattern="[6-7]{1}-[0-9]{7}" required max="8"><br>
+                    <b>E-mail: </b><input type="email" name="email" class="dattex" placeholder="jajalookoo1234@gmail.com"><br>
+                    <b>Domicilio: </b><input type="text" name="nomcli" class="dattex" placeholder="Av. Gral Lanza #2654">
+                    <b>Ciudad: </b>
+                    <select name="ciudad" id="selec">
+                        <option value=" ">Selecciona tu ciudad</option>
+                        <option value="lp">La Paz</option>
+                        <option value="cbba">Cochabamba</option>
+                        <option value="sc">Santa Cruz</option>
+                        <option value="or">Oruro</option>
+                        <option value="pts">Potosí</option>
+                        <option value="trj">Tarija</option>
+                        <option value="ben">Beni</option>
+                        <option value="pan">Pando</option>
+                        <option value="chu">Chuquisaca</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="venta">
+            <div id="forventa">
+                <form action="#">
+                    <table id="tabla">
+                        <tr>
+                            <th class="tr">CANTIDAD</th>
+                            <th class="tr">DESCRIPCION</th>
+                            <th class="tr">P. UNIT.</th>
+                            <th class="tr">IMPORTE</th>
+                        </tr>
+                        <tr>
+                            <td class="tr"><input type="number" name="cant" id="canti1" value="0" min="0"></td>
+                            <td class="tr">
+                                <select name="produc" id="prod1" onchange="productos1()">
+                                    <option value="">Selecciona producto</option>
+                                    <option value="res">Resistencias</option>
+                                    <option value="cap">Capacitores</option>
+                                    <option value="did">Diodos</option>
+                                    <option value="bob">Bobinas</option>    
+                                </select>
+                                <div id="poner_texto1"></div>
+                                <div id="poner_texto11"></div>
+                            </td>
+                            <td class="tr"><div id="precio1">0</div></td>
+                            <td class="tr"><span id="importe1">0</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tr"><input type="number" name="cant" id="canti2" value="0" min="0"></td>
+                            <td class="tr">
+                                <select name="produc" id="prod2" onchange="productos2()">
+                                    <option value="">Selecciona producto</option>
+                                    <option value="res">Resistencias</option>
+                                    <option value="cap">Capacitores</option>
+                                    <option value="did">Diodos</option>
+                                    <option value="bob">Bobinas</option>    
+                                </select>
+                                <div id="poner_texto2"></div>
+                                <div id="poner_texto22"></div>
+                            </td>
+                            <td class="tr"><span id="precio2">0</span></td>
+                            <td class="tr"><span id="importe2">0</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tr"><input type="number" name="cant" id="canti3" value="0" min="0"></td>
+                            <td class="tr">
+                                <select name="produc" id="prod3" onchange="productos3()">
+                                    <option value="">Selecciona producto</option>
+                                    <option value="res">Resistencias</option>
+                                    <option value="cap">Capacitores</option>
+                                    <option value="did">Diodos</option>
+                                    <option value="bob">Bobinas</option>    
+                                </select>
+                                <div id="poner_texto3"></div>
+                                <div id="poner_texto33"></div>
+                            </td>
+                            <td class="tr"><span id="precio3">0</span></td>
+                            <td class="tr"><span id="importe3">0</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tr"><input type="number" name="cant" id="canti4" value="0" min="0"></td>
+                            <td class="tr">
+                                <select name="produc" id="prod4" onchange="productos4()">
+                                    <option value="">Selecciona producto</option>
+                                    <option value="res">Resistencias</option>
+                                    <option value="cap">Capacitores</option>
+                                    <option value="did">Diodos</option>
+                                    <option value="bob">Bobinas</option>    
+                                </select>
+                                <div id="poner_texto4"></div>
+                                <div id="poner_texto44"></div>
+                            </td>
+                            <td class="tr"><span id="precio4">0</span></td>
+                            <td class="tr"><span id="importe4">0</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tr"><input type="number" name="cant" id="canti5" value="0" min="0"></td>
+                            <td class="tr">
+                                <select name="produc" id="prod5" onchange="productos5()">
+                                    <option value="">Selecciona producto</option>
+                                    <option value="res">Resistencias</option>
+                                    <option value="cap">Capacitores</option>
+                                    <option value="did">Diodos</option>
+                                    <option value="bob">Bobinas</option>    
+                                </select>
+                                <div id="poner_texto5"></div>
+                                <div id="poner_texto55"></div>
+                            </td>
+                            <td class="tr"><span id="precio5">0</span></td>
+                            <td class="tr"><span id="importe5">0</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tr" colspan="2" rowspan="3">
+                                <input type="submit" value="GENERAR" id="boton" onclick="genera();return false;">
+                            </td>
+                            <td class="tr">SUBTOTAL</td>
+                            <td class="tr"><div id="subtotal"></div></td>
+                        </tr>
+                        <tr>
+                            <td class="tr">I.V.A.</td>
+                            <td class="tr"><div id="iva"></div></td>
+                        </tr>
+                        <tr>
+                            <td class="tr">TOTAL</td>
+                            <td class="tr"><div id="total"></div></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>    
+        </div>
+    </main>
+</body>
+</html>
+
+<script>
+    function productos1() {
+        var indice = document.getElementById("prod1").selectedIndex;
+        var sigla = document.getElementById('prod1').options[indice].value;
+
+        const Resistencia = {
+            crb: "Carbón Depositado",
+            rcr: "Recubrimiento de Carbón",
+            met: "Recubrimiento de Metal",
+            smd: "SMD",
+            ala: "Alambre/Espiras"
+        };
+        const Capacitores = {
+            ele: "Electrolítico",
+            pol: "Poliester",
+            cer: "Cerámico",
+        };
+        const Diodos ={
+            rec: "Rectificador",
+            zen: "Zener"
+        }
+        const Bobinas ={
+            sol: "Núcleo sólido",
+            air: "Núcleo de aire"
+        }
+        switch (sigla) {
+            case 'res':
+                var texto = "<select name='' id='pontext1' onchange='carga1()'>";
+                    texto += "<option value=''>Seleccione tipo</option>"
+                    Object.keys(Resistencia).forEach(key => {
+                    texto += "<option value='"+key+"'>"+Resistencia[key]+"</option>";
+                    });
+                    texto += "</select>";
+                break;
+            case 'cap':
+                var texto = "<select name='' id='pontext1' onchange='carga1()'>";
+                    texto += "<option value=''>Seleccione tipo</option>"
+                    Object.keys(Capacitores).forEach(key => {
+                    texto += "<option value='"+key+"'>"+Capacitores[key]+"</option>";
+                    });
+                    texto += "</select>";
+                break;
+            case 'did':
+                var texto = "<select name='' id='pontext1' onchange='carga1()'>";
+                    texto += "<option value=''>Seleccione tipo</option>"
+                    Object.keys(Diodos).forEach(key => {
+                    texto += "<option value='"+key+"'>"+Diodos[key]+"</option>";
+                    });
+                    texto += "</select>";
+                break;
+            case 'bob':
+                var texto = "<select name='' id='pontext1' onchange='carga1()'>";
+                    texto += "<option value=''>Seleccione tipo</option>"
+                    Object.keys(Bobinas).forEach(key => {
+                    texto += "<option value='"+key+"'>"+Bobinas[key]+"</option>";
+                    });
+                    texto += "</select>";
+                break;
+            default:
+                var texto="";
+                break;
+        }
+        document.getElementById('poner_texto1').innerHTML=texto;
+    }
+    preciouni1=0;
+    function carga1() {
+        var indice = document.getElementById("pontext1").selectedIndex;
+        var sigla = document.getElementById('pontext1').options[indice].value;
+        switch (sigla) {
+            case 'crb':
+                var texto = "<p> Se fabrican en diferentes tamaños físicos con límites de disipación de potencia, normalmente desde 1 vatio hacia abajo hata 1/8 vatio.</p><img src='img/carbondepo.jpeg' alt='error' height='100px' width='200px' id='img'>";
+                preciouni1 = 0.50; 
+                break;
+            case 'rcr':
+                var texto = "<p> Material formado por carbón y otros elementos resistivos para disminuir la corriente que lo atraviesa, oponiéndose al paso de la corriente.</p><img src='img/recucarbon.jpg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni1 = 0.80; 
+                break;
+            case 'met':
+                var texto = "<p> Utilizan una película en la que se mezclan óxidos metálicos con el elemento resistivo . Se utilizan en aplicaciones de potencia relativamente intermedia de unos pocos vatios y son económicas.</p><img src='img/metal.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni1 = 1.0; 
+                break;
+            case 'smd':
+                var texto = "<p> Las resistencias SMD son adecuadas para el montaje directo en superficie de placas de circuito impreso y se caracterizan sobre todo por su tamaño miniaturizado.</p><img src='img/smd.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni1 = 2.3; 
+                break;
+            case 'ala':
+                var texto = "<p> Son un tipo de resistencias que se enrollan con un cable de resistencia en un esqueleto aislante y luego se procesan mediante un embalaje aislante.</p><img src='img/alam.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni1 = 5.0; 
+                break;
+            case 'ele':
+                var texto = "<p>  Es un dispositivo electrónico, normalmente con forma cilíndrica, que es capaz de acumular energía en su interior cuando se conecta a una fuente de tensión.</p><img src='img/elec.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni1 = 1.5; 
+                break;
+            case 'pol':
+                var texto = "<p>Son condensadores de película que utilizan un dieléctrico hecho de tereftalato de polietileno (PET), un material polimérico polar termoplástico, con nombres comerciales Hostaphan o Mylar, de la familia del poliéster.</p><img src='img/pol.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni1 = 3; 
+                break;
+            case 'cer':
+                var texto = "<p>Es un tipo de condensador (no polarizado) que se utiliza en muchas aplicaciones, desde audio hasta RF.</p><img src='img/cerr.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni1 = 2.8; 
+                break;
+            case 'rec':
+                var texto = "<p>Son elementos semiconductores que solo conducen corriente a través de ellos cuando se encuentran polarizados en directa, esta característica los hace útiles en circuitos rectificadores de señal y fuentes de voltaje, son fabricados de silicio y germanio su voltaje de polarización directa oscila en los 0.7v.</p><img src='img/recti.png' alt='error' height='100px' width='100px' id='img'>";
+                preciouni1 = 1.5; 
+                break;
+            case 'zen':
+                var texto = "<p>Tipo de diodo es normalmente polarizado en inversa, es utilizado en muchas aplicaciones de circuitos electrónicos para regular el voltaje. En la industria podemos encontrar diodos zener de diferentes tensiones de inversa que van desde un poco más de 3v hasta 100v, esta característica los hace conocer como diodos reguladores de tensión, puesto que al ser polarizados en inversa puede mantener el voltaje sin importar las variaciones de corriente.</p><img src='img/zen.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni1 = 2; 
+                break;
+            case 'sol':
+                var texto = "<p>Este tipo se caracteriza porque el alambre de cobre se enrolla alrededor de un material que mejora la capacidad magnética de la bobina, como por ejemplo el hierro o la ferrita. Dependiendo del núcleo que se utilice, se pueden alterar las características magnéticas del inductor.</p><img src='img/sol.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni1 = 8; 
+                break;
+            case 'air':
+                var texto = "<p>Este tipo es fácil de identificar porque es hueco por dentro y tiene una gran similitud a un resorte. Para crear una bobina con núcleo de aire, se toma el alambre conductor y se enrolla sobre un objeto hueco y cuando se termina se separa para lograr la bobina al aire.</p><img src='img/air.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni1 = 6.5; 
+                break;
+            default:
+                var texto="";
+                preciouni1=0;
+                break;
+        }
+        document.getElementById('poner_texto11').innerHTML=texto;
+        document.getElementById('precio1').innerHTML=preciouni1;
+    }
+
+    function productos2() {
+        var indice = document.getElementById("prod2").selectedIndex;
+        var sigla = document.getElementById('prod2').options[indice].value;
+
+        const Resistencia = {
+            crb: "Carbón Depositado",
+            rcr: "Recubrimiento de Carbón",
+            met: "Recubrimiento de Metal",
+            smd: "SMD",
+            ala: "Alambre/Espiras"
+        };
+        const Capacitores = {
+            ele: "Electrolítico",
+            pol: "Poliester",
+            cer: "Cerámico",
+        };
+        const Diodos ={
+            rec: "Rectificador",
+            zen: "Zener"
+        }
+        const Bobinas ={
+            sol: "Núcleo sólido",
+            air: "Núcleo de aire"
+        }
+        switch (sigla) {
+            case 'res':
+                var texto = "<select name='' id='pontext2' onchange='carga2()'>";
+                    texto += "<option value=''>Seleccione tipo</option>"
+                    Object.keys(Resistencia).forEach(key => {
+                    texto += "<option value='"+key+"'>"+Resistencia[key]+"</option>";
+                    });
+                    texto += "</select>";
+                break;
+            case 'cap':
+                var texto = "<select name='' id='pontext2' onchange='carga2()'>";
+                    texto += "<option value=''>Seleccione tipo</option>"
+                    Object.keys(Capacitores).forEach(key => {
+                    texto += "<option value='"+key+"'>"+Capacitores[key]+"</option>";
+                    });
+                    texto += "</select>";
+                break;
+            case 'did':
+                var texto = "<select name='' id='pontext2' onchange='carga2()'>";
+                    texto += "<option value=''>Seleccione tipo</option>"
+                    Object.keys(Diodos).forEach(key => {
+                    texto += "<option value='"+key+"'>"+Diodos[key]+"</option>";
+                    });
+                    texto += "</select>";
+                break;
+            case 'bob':
+                var texto = "<select name='' id='pontext2' onchange='carga2()'>";
+                    texto += "<option value=''>Seleccione tipo</option>"
+                    Object.keys(Bobinas).forEach(key => {
+                    texto += "<option value='"+key+"'>"+Bobinas[key]+"</option>";
+                    });
+                    texto += "</select>";
+                break;
+            default:
+                var texto="";
+                break;
+        }
+        document.getElementById('poner_texto2').innerHTML=texto;
+    }
+
+    preciouni2=0;
+    function carga2() {
+        var indice = document.getElementById("pontext2").selectedIndex;
+        var sigla = document.getElementById('pontext2').options[indice].value;
+
+        switch (sigla) {
+            case 'crb':
+                var texto = "<p> Se fabrican en diferentes tamaños físicos con límites de disipación de potencia, normalmente desde 1 vatio hacia abajo hata 1/8 vatio.</p><img src='img/carbondepo.jpeg' alt='error' height='100px' width='200px' id='img'>";
+                preciouni2 = 0.50; 
+                break;
+            case 'rcr':
+                var texto = "<p> Material formado por carbón y otros elementos resistivos para disminuir la corriente que lo atraviesa, oponiéndose al paso de la corriente.</p><img src='img/recucarbon.jpg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni2 = 0.80; 
+                break;
+            case 'met':
+                var texto = "<p> Utilizan una película en la que se mezclan óxidos metálicos con el elemento resistivo . Se utilizan en aplicaciones de potencia relativamente intermedia de unos pocos vatios y son económicas.</p><img src='img/metal.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni2 = 1.0; 
+                break;
+            case 'smd':
+                var texto = "<p> Las resistencias SMD son adecuadas para el montaje directo en superficie de placas de circuito impreso y se caracterizan sobre todo por su tamaño miniaturizado.</p><img src='img/smd.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni2 = 2.3; 
+                break;
+            case 'ala':
+                var texto = "<p> Son un tipo de resistencias que se enrollan con un cable de resistencia en un esqueleto aislante y luego se procesan mediante un embalaje aislante.</p><img src='img/alam.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni2 = 5.0; 
+                break;
+            case 'ele':
+                var texto = "<p>  Es un dispositivo electrónico, normalmente con forma cilíndrica, que es capaz de acumular energía en su interior cuando se conecta a una fuente de tensión.</p><img src='img/elec.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni2 = 1.5; 
+                break;
+            case 'pol':
+                var texto = "<p>Son condensadores de película que utilizan un dieléctrico hecho de tereftalato de polietileno (PET), un material polimérico polar termoplástico, con nombres comerciales Hostaphan o Mylar, de la familia del poliéster.</p><img src='img/pol.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni2 = 3; 
+                break;
+            case 'cer':
+                var texto = "<p>Es un tipo de condensador (no polarizado) que se utiliza en muchas aplicaciones, desde audio hasta RF.</p><img src='img/cerr.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni2 = 2.8; 
+                break;
+            case 'rec':
+                var texto = "<p>Son elementos semiconductores que solo conducen corriente a través de ellos cuando se encuentran polarizados en directa, esta característica los hace útiles en circuitos rectificadores de señal y fuentes de voltaje, son fabricados de silicio y germanio su voltaje de polarización directa oscila en los 0.7v.</p><img src='img/recti.png' alt='error' height='100px' width='100px' id='img'>";
+                preciouni2 = 1.5; 
+                break;
+            case 'zen':
+                var texto = "<p>Tipo de diodo es normalmente polarizado en inversa, es utilizado en muchas aplicaciones de circuitos electrónicos para regular el voltaje. En la industria podemos encontrar diodos zener de diferentes tensiones de inversa que van desde un poco más de 3v hasta 100v, esta característica los hace conocer como diodos reguladores de tensión, puesto que al ser polarizados en inversa puede mantener el voltaje sin importar las variaciones de corriente.</p><img src='img/zen.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni2 = 2; 
+                break;
+            case 'sol':
+                var texto = "<p>Este tipo se caracteriza porque el alambre de cobre se enrolla alrededor de un material que mejora la capacidad magnética de la bobina, como por ejemplo el hierro o la ferrita. Dependiendo del núcleo que se utilice, se pueden alterar las características magnéticas del inductor.</p><img src='img/sol.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni2 = 8; 
+                break;
+            case 'air':
+                var texto = "<p>Este tipo es fácil de identificar porque es hueco por dentro y tiene una gran similitud a un resorte. Para crear una bobina con núcleo de aire, se toma el alambre conductor y se enrolla sobre un objeto hueco y cuando se termina se separa para lograr la bobina al aire.</p><img src='img/air.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni2 = 6.5; 
+                break;
+            default:
+                var texto="";
+                preciouni2=0;
+                break;
+        }
+        document.getElementById('poner_texto22').innerHTML=texto;
+        document.getElementById('precio2').innerHTML=preciouni2;
+    }
+
+    function productos3() {
+        var indice = document.getElementById("prod3").selectedIndex;
+        var sigla = document.getElementById('prod3').options[indice].value;
+
+        const Resistencia = {
+            crb: "Carbón Depositado",
+            rcr: "Recubrimiento de Carbón",
+            met: "Recubrimiento de Metal",
+            smd: "SMD",
+            ala: "Alambre/Espiras"
+        };
+        const Capacitores = {
+            ele: "Electrolítico",
+            pol: "Poliester",
+            cer: "Cerámico",
+        };
+        const Diodos ={
+            rec: "Rectificador",
+            zen: "Zener"
+        }
+        const Bobinas ={
+            sol: "Núcleo sólido",
+            air: "Núcleo de aire"
+        }
+        switch (sigla) {
+            case 'res':
+                var texto = "<select name='' id='pontext3' onchange='carga3()'>";
+                    texto += "<option value=''>Seleccione tipo</option>"
+                    Object.keys(Resistencia).forEach(key => {
+                    texto += "<option value='"+key+"'>"+Resistencia[key]+"</option>";
+                    });
+                    texto += "</select>";
+                break;
+            case 'cap':
+                var texto = "<select name='' id='pontext3' onchange='carga3()'>";
+                    texto += "<option value=''>Seleccione tipo</option>"
+                    Object.keys(Capacitores).forEach(key => {
+                    texto += "<option value='"+key+"'>"+Capacitores[key]+"</option>";
+                    });
+                    texto += "</select>";
+                break;
+            case 'did':
+                var texto = "<select name='' id='pontext3' onchange='carga3()'>";
+                    texto += "<option value=''>Seleccione tipo</option>"
+                    Object.keys(Diodos).forEach(key => {
+                    texto += "<option value='"+key+"'>"+Diodos[key]+"</option>";
+                    });
+                    texto += "</select>";
+                break;
+            case 'bob':
+                var texto = "<select name='' id='pontext3' onchange='carga3()'>";
+                    texto += "<option value=''>Seleccione tipo</option>"
+                    Object.keys(Bobinas).forEach(key => {
+                    texto += "<option value='"+key+"'>"+Bobinas[key]+"</option>";
+                    });
+                    texto += "</select>";
+                break;
+            default:
+                var texto="";
+                break;
+        }
+        document.getElementById('poner_texto3').innerHTML=texto;
+    }
+
+    preciouni3=0;
+    function carga3() {
+        var indice = document.getElementById("pontext3").selectedIndex;
+        var sigla = document.getElementById('pontext3').options[indice].value;
+
+        switch (sigla) {
+            case 'crb':
+                var texto = "<p> Se fabrican en diferentes tamaños físicos con límites de disipación de potencia, normalmente desde 1 vatio hacia abajo hata 1/8 vatio.</p><img src='img/carbondepo.jpeg' alt='error' height='100px' width='200px' id='img'>";
+                preciouni3 = 0.50; 
+                break;
+            case 'rcr':
+                var texto = "<p> Material formado por carbón y otros elementos resistivos para disminuir la corriente que lo atraviesa, oponiéndose al paso de la corriente.</p><img src='img/recucarbon.jpg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni3 = 0.80; 
+                break;
+            case 'met':
+                var texto = "<p> Utilizan una película en la que se mezclan óxidos metálicos con el elemento resistivo . Se utilizan en aplicaciones de potencia relativamente intermedia de unos pocos vatios y son económicas.</p><img src='img/metal.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni3 = 1.0; 
+                break;
+            case 'smd':
+                var texto = "<p> Las resistencias SMD son adecuadas para el montaje directo en superficie de placas de circuito impreso y se caracterizan sobre todo por su tamaño miniaturizado.</p><img src='img/smd.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni3 = 2.3; 
+                break;
+            case 'ala':
+                var texto = "<p> Son un tipo de resistencias que se enrollan con un cable de resistencia en un esqueleto aislante y luego se procesan mediante un embalaje aislante.</p><img src='img/alam.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni3 = 5.0; 
+                break;
+            case 'ele':
+                var texto = "<p>  Es un dispositivo electrónico, normalmente con forma cilíndrica, que es capaz de acumular energía en su interior cuando se conecta a una fuente de tensión.</p><img src='img/elec.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni3 = 1.5; 
+                break;
+            case 'pol':
+                var texto = "<p>Son condensadores de película que utilizan un dieléctrico hecho de tereftalato de polietileno (PET), un material polimérico polar termoplástico, con nombres comerciales Hostaphan o Mylar, de la familia del poliéster.</p><img src='img/pol.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni3 = 3; 
+                break;
+            case 'cer':
+                var texto = "<p>Es un tipo de condensador (no polarizado) que se utiliza en muchas aplicaciones, desde audio hasta RF.</p><img src='img/cerr.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni3 = 2.8; 
+                break;
+            case 'rec':
+                var texto = "<p>Son elementos semiconductores que solo conducen corriente a través de ellos cuando se encuentran polarizados en directa, esta característica los hace útiles en circuitos rectificadores de señal y fuentes de voltaje, son fabricados de silicio y germanio su voltaje de polarización directa oscila en los 0.7v.</p><img src='img/recti.png' alt='error' height='100px' width='100px' id='img'>";
+                preciouni3 = 1.5; 
+                break;
+            case 'zen':
+                var texto = "<p>Tipo de diodo es normalmente polarizado en inversa, es utilizado en muchas aplicaciones de circuitos electrónicos para regular el voltaje. En la industria podemos encontrar diodos zener de diferentes tensiones de inversa que van desde un poco más de 3v hasta 100v, esta característica los hace conocer como diodos reguladores de tensión, puesto que al ser polarizados en inversa puede mantener el voltaje sin importar las variaciones de corriente.</p><img src='img/zen.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni3 = 2; 
+                break;
+            case 'sol':
+                var texto = "<p>Este tipo se caracteriza porque el alambre de cobre se enrolla alrededor de un material que mejora la capacidad magnética de la bobina, como por ejemplo el hierro o la ferrita. Dependiendo del núcleo que se utilice, se pueden alterar las características magnéticas del inductor.</p><img src='img/sol.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni3 = 8; 
+                break;
+            case 'air':
+                var texto = "<p>Este tipo es fácil de identificar porque es hueco por dentro y tiene una gran similitud a un resorte. Para crear una bobina con núcleo de aire, se toma el alambre conductor y se enrolla sobre un objeto hueco y cuando se termina se separa para lograr la bobina al aire.</p><img src='img/air.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni3 = 6.5; 
+                break;
+            default:
+                var texto="";
+                preciouni3=0;
+                break;
+        }
+        document.getElementById('poner_texto33').innerHTML=texto;
+        document.getElementById('precio3').innerHTML=preciouni3;
+    }
+
+    function productos4() {
+        var indice = document.getElementById("prod4").selectedIndex;
+        var sigla = document.getElementById('prod4').options[indice].value;
+
+        const Resistencia = {
+            crb: "Carbón Depositado",
+            rcr: "Recubrimiento de Carbón",
+            met: "Recubrimiento de Metal",
+            smd: "SMD",
+            ala: "Alambre/Espiras"
+        };
+        const Capacitores = {
+            ele: "Electrolítico",
+            pol: "Poliester",
+            cer: "Cerámico",
+        };
+        const Diodos ={
+            rec: "Rectificador",
+            zen: "Zener"
+        }
+        const Bobinas ={
+            sol: "Núcleo sólido",
+            air: "Núcleo de aire"
+        }
+        switch (sigla) {
+            case 'res':
+                var texto = "<select name='' id='pontext4' onchange='carga4()'>";
+                    texto += "<option value=''>Seleccione tipo</option>"
+                    Object.keys(Resistencia).forEach(key => {
+                    texto += "<option value='"+key+"'>"+Resistencia[key]+"</option>";
+                    });
+                    texto += "</select>";
+                break;
+            case 'cap':
+                var texto = "<select name='' id='pontext4' onchange='carga4()'>";
+                    texto += "<option value=''>Seleccione tipo</option>"
+                    Object.keys(Capacitores).forEach(key => {
+                    texto += "<option value='"+key+"'>"+Capacitores[key]+"</option>";
+                    });
+                    texto += "</select>";
+                break;
+            case 'did':
+                var texto = "<select name='' id='pontext4' onchange='carga4()'>";
+                    texto += "<option value=''>Seleccione tipo</option>"
+                    Object.keys(Diodos).forEach(key => {
+                    texto += "<option value='"+key+"'>"+Diodos[key]+"</option>";
+                    });
+                    texto += "</select>";
+                break;
+            case 'bob':
+                var texto = "<select name='' id='pontext4' onchange='carga4()'>";
+                    texto += "<option value=''>Seleccione tipo</option>"
+                    Object.keys(Bobinas).forEach(key => {
+                    texto += "<option value='"+key+"'>"+Bobinas[key]+"</option>";
+                    });
+                    texto += "</select>";
+                break;
+            default:
+                var texto="";
+                break;
+        }
+        document.getElementById('poner_texto4').innerHTML=texto;
+    }
+
+    preciouni4=0;
+    function carga4() {
+        var indice = document.getElementById("pontext4").selectedIndex;
+        var sigla = document.getElementById('pontext4').options[indice].value;
+
+        switch (sigla) {
+            case 'crb':
+                var texto = "<p> Se fabrican en diferentes tamaños físicos con límites de disipación de potencia, normalmente desde 1 vatio hacia abajo hata 1/8 vatio.</p><img src='img/carbondepo.jpeg' alt='error' height='100px' width='200px' id='img'>";
+                preciouni4 = 0.50; 
+                break;
+            case 'rcr':
+                var texto = "<p> Material formado por carbón y otros elementos resistivos para disminuir la corriente que lo atraviesa, oponiéndose al paso de la corriente.</p><img src='img/recucarbon.jpg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni4 = 0.80; 
+                break;
+            case 'met':
+                var texto = "<p> Utilizan una película en la que se mezclan óxidos metálicos con el elemento resistivo . Se utilizan en aplicaciones de potencia relativamente intermedia de unos pocos vatios y son económicas.</p><img src='img/metal.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni4 = 1.0; 
+                break;
+            case 'smd':
+                var texto = "<p> Las resistencias SMD son adecuadas para el montaje directo en superficie de placas de circuito impreso y se caracterizan sobre todo por su tamaño miniaturizado.</p><img src='img/smd.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni4 = 2.3; 
+                break;
+            case 'ala':
+                var texto = "<p> Son un tipo de resistencias que se enrollan con un cable de resistencia en un esqueleto aislante y luego se procesan mediante un embalaje aislante.</p><img src='img/alam.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni4 = 5.0; 
+                break;
+            case 'ele':
+                var texto = "<p>  Es un dispositivo electrónico, normalmente con forma cilíndrica, que es capaz de acumular energía en su interior cuando se conecta a una fuente de tensión.</p><img src='img/elec.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni4 = 1.5; 
+                break;
+            case 'pol':
+                var texto = "<p>Son condensadores de película que utilizan un dieléctrico hecho de tereftalato de polietileno (PET), un material polimérico polar termoplástico, con nombres comerciales Hostaphan o Mylar, de la familia del poliéster.</p><img src='img/pol.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni4 = 3; 
+                break;
+            case 'cer':
+                var texto = "<p>Es un tipo de condensador (no polarizado) que se utiliza en muchas aplicaciones, desde audio hasta RF.</p><img src='img/cerr.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni4 = 2.8; 
+                break;
+            case 'rec':
+                var texto = "<p>Son elementos semiconductores que solo conducen corriente a través de ellos cuando se encuentran polarizados en directa, esta característica los hace útiles en circuitos rectificadores de señal y fuentes de voltaje, son fabricados de silicio y germanio su voltaje de polarización directa oscila en los 0.7v.</p><img src='img/recti.png' alt='error' height='100px' width='100px' id='img'>";
+                preciouni4 = 1.5; 
+                break;
+            case 'zen':
+                var texto = "<p>Tipo de diodo es normalmente polarizado en inversa, es utilizado en muchas aplicaciones de circuitos electrónicos para regular el voltaje. En la industria podemos encontrar diodos zener de diferentes tensiones de inversa que van desde un poco más de 3v hasta 100v, esta característica los hace conocer como diodos reguladores de tensión, puesto que al ser polarizados en inversa puede mantener el voltaje sin importar las variaciones de corriente.</p><img src='img/zen.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni4 = 2; 
+                break;
+            case 'sol':
+                var texto = "<p>Este tipo se caracteriza porque el alambre de cobre se enrolla alrededor de un material que mejora la capacidad magnética de la bobina, como por ejemplo el hierro o la ferrita. Dependiendo del núcleo que se utilice, se pueden alterar las características magnéticas del inductor.</p><img src='img/sol.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni4 = 8; 
+                break;
+            case 'air':
+                var texto = "<p>Este tipo es fácil de identificar porque es hueco por dentro y tiene una gran similitud a un resorte. Para crear una bobina con núcleo de aire, se toma el alambre conductor y se enrolla sobre un objeto hueco y cuando se termina se separa para lograr la bobina al aire.</p><img src='img/air.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni4 = 6.5; 
+                break;
+            default:
+                var texto="";
+                preciouni4=0;
+                break;
+        }
+        document.getElementById('poner_texto44').innerHTML=texto;
+        document.getElementById('precio4').innerHTML=preciouni4;
+    }
+
+    function productos5() {
+        var indice = document.getElementById("prod5").selectedIndex;
+        var sigla = document.getElementById('prod5').options[indice].value;
+
+        const Resistencia = {
+            crb: "Carbón Depositado",
+            rcr: "Recubrimiento de Carbón",
+            met: "Recubrimiento de Metal",
+            smd: "SMD",
+            ala: "Alambre/Espiras"
+        };
+        const Capacitores = {
+            ele: "Electrolítico",
+            pol: "Poliester",
+            cer: "Cerámico",
+        };
+        const Diodos ={
+            rec: "Rectificador",
+            zen: "Zener"
+        }
+        const Bobinas ={
+            sol: "Núcleo sólido",
+            air: "Núcleo de aire"
+        }
+        switch (sigla) {
+            case 'res':
+                var texto = "<select name='' id='pontext5' onchange='carga5()'>";
+                    texto += "<option value=''>Seleccione tipo</option>"
+                    Object.keys(Resistencia).forEach(key => {
+                    texto += "<option value='"+key+"'>"+Resistencia[key]+"</option>";
+                    });
+                    texto += "</select>";
+                break;
+            case 'cap':
+                var texto = "<select name='' id='pontext5' onchange='carga5()'>";
+                    texto += "<option value=''>Seleccione tipo</option>"
+                    Object.keys(Capacitores).forEach(key => {
+                    texto += "<option value='"+key+"'>"+Capacitores[key]+"</option>";
+                    });
+                    texto += "</select>";
+                break;
+            case 'did':
+                var texto = "<select name='' id='pontext5' onchange='carga5()'>";
+                    texto += "<option value=''>Seleccione tipo</option>"
+                    Object.keys(Diodos).forEach(key => {
+                    texto += "<option value='"+key+"'>"+Diodos[key]+"</option>";
+                    });
+                    texto += "</select>";
+                break;
+            case 'bob':
+                var texto = "<select name='' id='pontext5' onchange='carga5()'>";
+                    texto += "<option value=''>Seleccione tipo</option>"
+                    Object.keys(Bobinas).forEach(key => {
+                    texto += "<option value='"+key+"'>"+Bobinas[key]+"</option>";
+                    });
+                    texto += "</select>";
+                break;
+            default:
+                var texto="";
+                break;
+        }
+        document.getElementById('poner_texto5').innerHTML=texto;
+    }
+
+    preciouni5=0;
+    function carga5() {
+        var indice = document.getElementById("pontext5").selectedIndex;
+        var sigla = document.getElementById('pontext5').options[indice].value;
+
+        switch (sigla) {
+            case 'crb':
+                var texto = "<p> Se fabrican en diferentes tamaños físicos con límites de disipación de potencia, normalmente desde 1 vatio hacia abajo hata 1/8 vatio.</p><img src='img/carbondepo.jpeg' alt='error' height='100px' width='200px' id='img'>";
+                preciouni5 = 0.50; 
+                break;
+            case 'rcr':
+                var texto = "<p> Material formado por carbón y otros elementos resistivos para disminuir la corriente que lo atraviesa, oponiéndose al paso de la corriente.</p><img src='img/recucarbon.jpg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni5 = 0.80; 
+                break;
+            case 'met':
+                var texto = "<p> Utilizan una película en la que se mezclan óxidos metálicos con el elemento resistivo . Se utilizan en aplicaciones de potencia relativamente intermedia de unos pocos vatios y son económicas.</p><img src='img/metal.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni5 = 1.0; 
+                break;
+            case 'smd':
+                var texto = "<p> Las resistencias SMD son adecuadas para el montaje directo en superficie de placas de circuito impreso y se caracterizan sobre todo por su tamaño miniaturizado.</p><img src='img/smd.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni5 = 2.3; 
+                break;
+            case 'ala':
+                var texto = "<p> Son un tipo de resistencias que se enrollan con un cable de resistencia en un esqueleto aislante y luego se procesan mediante un embalaje aislante.</p><img src='img/alam.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni5 = 5.0; 
+                break;
+            case 'ele':
+                var texto = "<p>  Es un dispositivo electrónico, normalmente con forma cilíndrica, que es capaz de acumular energía en su interior cuando se conecta a una fuente de tensión.</p><img src='img/elec.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni5 = 1.5; 
+                break;
+            case 'pol':
+                var texto = "<p>Son condensadores de película que utilizan un dieléctrico hecho de tereftalato de polietileno (PET), un material polimérico polar termoplástico, con nombres comerciales Hostaphan o Mylar, de la familia del poliéster.</p><img src='img/pol.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni5 = 3; 
+                break;
+            case 'cer':
+                var texto = "<p>Es un tipo de condensador (no polarizado) que se utiliza en muchas aplicaciones, desde audio hasta RF.</p><img src='img/cerr.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni5 = 2.8; 
+                break;
+            case 'rec':
+                var texto = "<p>Son elementos semiconductores que solo conducen corriente a través de ellos cuando se encuentran polarizados en directa, esta característica los hace útiles en circuitos rectificadores de señal y fuentes de voltaje, son fabricados de silicio y germanio su voltaje de polarización directa oscila en los 0.7v.</p><img src='img/recti.png' alt='error' height='100px' width='100px' id='img'>";
+                preciouni5 = 1.5; 
+                break;
+            case 'zen':
+                var texto = "<p>Tipo de diodo es normalmente polarizado en inversa, es utilizado en muchas aplicaciones de circuitos electrónicos para regular el voltaje. En la industria podemos encontrar diodos zener de diferentes tensiones de inversa que van desde un poco más de 3v hasta 100v, esta característica los hace conocer como diodos reguladores de tensión, puesto que al ser polarizados en inversa puede mantener el voltaje sin importar las variaciones de corriente.</p><img src='img/zen.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni5 = 2; 
+                break;
+            case 'sol':
+                var texto = "<p>Este tipo se caracteriza porque el alambre de cobre se enrolla alrededor de un material que mejora la capacidad magnética de la bobina, como por ejemplo el hierro o la ferrita. Dependiendo del núcleo que se utilice, se pueden alterar las características magnéticas del inductor.</p><img src='img/sol.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni5 = 8; 
+                break;
+            case 'air':
+                var texto = "<p>Este tipo es fácil de identificar porque es hueco por dentro y tiene una gran similitud a un resorte. Para crear una bobina con núcleo de aire, se toma el alambre conductor y se enrolla sobre un objeto hueco y cuando se termina se separa para lograr la bobina al aire.</p><img src='img/air.jpeg' alt='error' height='100px' width='100px' id='img'>";
+                preciouni5 = 6.5; 
+                break;
+            default:
+                var texto="";
+                preciouni5=0;
+                break;
+        }
+        document.getElementById('poner_texto55').innerHTML=texto;
+        document.getElementById('precio5').innerHTML=preciouni5;
+    }
+
+    
+    
+    function genera() {
+        cant1 = document.getElementById('canti1').value;
+        preciotot1 = preciouni1*cant1;
+        cant2 = document.getElementById('canti2').value;
+        preciotot2 = preciouni2*cant2;
+        cant3 = document.getElementById('canti3').value;
+        preciotot3 = preciouni3*cant3;
+        cant4 = document.getElementById('canti4').value;
+        preciotot4 = preciouni4*cant4;
+        cant5 = document.getElementById('canti5').value;
+        preciotot5 = preciouni5*cant5;
+
+        subtotal = preciotot1+preciotot2+preciotot3+preciotot4+preciotot5;
+        iva = subtotal*(13/100);
+        total = subtotal+iva;
+
+        document.getElementById('importe1').innerHTML=preciotot1.toFixed(2);
+        document.getElementById('importe2').innerHTML=preciotot2.toFixed(2);
+        document.getElementById('importe3').innerHTML=preciotot3.toFixed(2);
+        document.getElementById('importe4').innerHTML=preciotot4.toFixed(2);
+        document.getElementById('importe5').innerHTML=preciotot5.toFixed(2);
+        document.getElementById('subtotal').innerHTML=subtotal.toFixed(2);
+        document.getElementById('iva').innerHTML=iva.toFixed(2);
+        document.getElementById('total').innerHTML=total.toFixed(2);
+    }
+</script>

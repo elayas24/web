@@ -1,0 +1,247 @@
+body{
+    padding: 5px;
+    background-image: url(img/fondogeneral1.jpeg);
+}
+
+#cabecera{
+    background-color: #f5f5f5b5;
+    border-radius: 50px;
+    border: 2px solid black;
+    margin: 10px 150px 10px 150px;
+}
+#h1{
+    text-align: center;
+    margin: 10px;
+}
+#logo{
+    float: left;
+}
+#logo > img{
+    border-radius: 50px;
+    margin-left: 50px;
+}
+#nventa{
+    font-size: 80px;
+    font-family:'Times New Roman', Times, serif;
+    padding-top: 20px;
+    text-align: center;
+}
+#h2{
+    margin: 10px 10px 10px 50px;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#empresa{
+    float: left;
+    margin: 10px;
+}
+#numeroventa{
+    margin: 10px 10px 10px 550px;
+}
+#fecha{
+    background-color: rgba(128, 128, 128, 0.3);
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    border-radius: 15px;
+    border: solid 1px ;
+    height: 25px;
+    width: 200px;
+    padding-left: 15px;
+}
+.recupera{
+    clear: both;
+}
+#cliente{
+    background-color: #f5f5f5b5;
+    border-radius: 50px;
+    border: 2px solid black;
+    margin: 10px 150px 10px 150px;
+    padding: 15px;
+    font-size: 25px;
+}
+.dattex{
+    margin: 5px 50px 5px 5px;
+    background-color: rgba(128, 128, 128, 0.2);
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    border-radius: 15px;
+    border: solid 1px ;
+    height: 25px;
+    width: 500px;
+    padding-left: 15px;
+}
+.datnum{
+    margin-right: 10px;
+    background-color: rgba(128, 128, 128, 0.2);
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    border-radius: 15px;
+    border: solid 1px ;
+    height: 25px;
+    width: 200px;
+}
+#selec{
+    background-color: rgba(128, 128, 128, 0.2);
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    border-radius: 15px;
+    border: solid 1px ;
+    height: 30px;
+    width: 300px;
+}
+#venta{
+    background-color: #f5f5f5b5;
+    border-radius: 50px;
+    margin: 0px 150px 0px 150px;
+    border: 2px solid black; 
+    padding: 20px;
+    display: grid;
+    place-items: center;
+}
+#tabla{
+    text-align: center;
+    font-size: 25px;
+    width: 1000px;
+    border: double gray 8px;
+    border-radius: 15px;
+}
+.tr{
+    border: solid gray 2px;
+    border-radius: 15px;
+}
+#prod1{
+    background-color: rgba(128, 128, 128, 0.2);
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    border-radius: 15px;
+    border: solid 1px ;
+    height: 30px;
+    width: 300px;
+}
+#prod2{
+    background-color: rgba(128, 128, 128, 0.2);
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    border-radius: 15px;
+    border: solid 1px ;
+    height: 30px;
+    width: 300px;
+}
+#prod3{
+    background-color: rgba(128, 128, 128, 0.2);
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    border-radius: 15px;
+    border: solid 1px ;
+    height: 30px;
+    width: 300px;
+}
+#prod4{
+    background-color: rgba(128, 128, 128, 0.2);
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    border-radius: 15px;
+    border: solid 1px ;
+    height: 30px;
+    width: 300px;
+}
+#prod5{
+    background-color: rgba(128, 128, 128, 0.2);
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    border-radius: 15px;
+    border: solid 1px ;
+    height: 30px;
+    width: 300px;
+}
+#pontext1{
+    background-color: rgba(128, 128, 128, 0.2);
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    border-radius: 15px;
+    border: solid 1px ;
+    height: 30px;
+    width: 300px;
+}
+#pontext2{
+    background-color: rgba(128, 128, 128, 0.2);
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    border-radius: 15px;
+    border: solid 1px ;
+    height: 30px;
+    width: 300px;
+}
+#pontext3{
+    background-color: rgba(128, 128, 128, 0.2);
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    border-radius: 15px;
+    border: solid 1px ;
+    height: 30px;
+    width: 300px;
+}
+#pontext4{
+    background-color: rgba(128, 128, 128, 0.2);
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    border-radius: 15px;
+    border: solid 1px ;
+    height: 30px;
+    width: 300px;
+}
+#pontext5{
+    background-color: rgba(128, 128, 128, 0.2);
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    border-radius: 15px;
+    border: solid 1px ;
+    height: 30px;
+    width: 300px;
+}
+#canti1{
+    height: 30px;
+    width: 50px;
+    padding-left: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: rgba(128, 128, 128, 0.327);
+}
+#canti2{
+    height: 30px;
+    width: 50px;
+    padding-left: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: rgba(128, 128, 128, 0.327);
+}
+#canti3{
+    height: 30px;
+    width: 50px;
+    padding-left: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: rgba(128, 128, 128, 0.327);
+}
+#canti4{
+    height: 30px;
+    width: 50px;
+    padding-left: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: rgba(128, 128, 128, 0.327);
+}
+#canti5{
+    height: 30px;
+    width: 50px;
+    padding-left: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: rgba(128, 128, 128, 0.327);
+}
+#boton{
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: rgba(210, 105, 30, 0.4);
+}
